@@ -1,0 +1,247 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false"
+    applyBodyTag="false" docType="html-5.0">
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Salesforce Lightning Design System Trailhead Module</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Import the Design System style sheet -->
+        <apex:slds />
+
+    </head>
+
+    <body>
+        <style>
+            table.scroll {
+                width: 100%;
+            }
+             table.scroll tr,
+            table.scroll thead,
+            table.scroll tbody{
+                display: block;
+            }
+            
+
+            table.scroll td,
+            table.scroll th {
+                display: table;
+            }
+            
+            table.scroll thead th {
+                text-align: left;
+            }
+            
+            table.scroll tbody {
+                height: 40px;
+                overflow-y: auto;
+                width: 100%;
+            }
+            
+            table.scroll thead {
+                width: 100%;
+                padding-right: 18px;
+            }
+            
+            table.scroll  td,
+            table.scroll  th {
+                float: left;
+                text-align: left;
+            }
+            
+            .th1 {
+                width: 20%;
+            }
+            
+            .th2 {
+                width: 20%;
+            }
+            
+            .th3 {
+                width: 15%;
+            }
+            
+            .th4 {
+                width: 15%;
+            }
+            
+            .th5 {
+                width: 15%;
+            }
+            
+            .th6 {
+                width: 14.5%;
+            }
+            
+            table.scroll td {
+                vertical-align: middle;
+            }
+
+        </style>
+        <!-- REQUIRED SLDS WRAPPER -->
+
+        <br/>
+
+
+
+        <div class="slds-scope">
+
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer scroll">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th class='th1' scope="col">
+                            <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+                        </th>
+                        <th class='th2' scope="col">
+                            <div class="slds-truncate" title="Account Name">Account Name</div>
+                        </th>
+                        <th class='th3' scope="col">
+                            <div class="slds-truncate" title="Close Date">Close Date</div>
+                        </th>
+                        <th class='th4' scope="col">
+                            <div class="slds-truncate" title="Stage">Stage</div>
+                        </th>
+                        <th class='th5' scope="col">
+                            <div class="slds-truncate" title="Confidence">Confidence</div>
+                        </th>
+
+                        <th class='th6' scope="col">
+                            <div class="slds-truncate" title="Confidence">Confidence</div>
+                        </th>
+
+                    </tr>
+                </thead>
+                <div id="tablebodydiv">
+                    <tbody>
+                        <tr>
+                            <td class='th1' scope="row" data-label="Opportunity Name">
+                                <div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
+                            </td>
+                            <td class='th2' data-label="Account Name">
+                                <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+                            </td>
+                            <td class='th3' data-label="Close Date">
+                                <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
+                            </td>
+                            <td class='th4' data-label="Prospecting">
+                                <div class="slds-truncate" title="Prospecting">Prospecting</div>
+                            </td>
+                            <td class='th5' data-label="Confidence">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+                            <td class='th6' data-label="aaa">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class='th1' scope="row" data-label="Opportunity Name">
+                                <div class="slds-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
+                            </td>
+                            <td class='th2' data-label="Account Name">
+                                <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+                            </td>
+                            <td class='th3' data-label="Close Date">
+                                <div class="slds-truncate" title="4/13/2015">4/13/2015</div>
+                            </td>
+                            <td class='th4' data-label="Prospecting">
+                                <div class="slds-truncate" title="Prospecaa">Prospecaa</div>
+                            </td>
+                            <td class='th5' data-label="Confidence">
+                                <div class="slds-truncate" title="20%">22%</div>
+                            </td>
+                            <td class='th6' data-label="aaa">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </div>
+            </table>
+
+
+            <br/>
+
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th class='th1' scope="col">
+                            <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+                        </th>
+                        <th class='th2' scope="col">
+                            <div class="slds-truncate" title="Account Name">Account Name</div>
+                        </th>
+                        <th class='th3' scope="col">
+                            <div class="slds-truncate" title="Close Date">Close Date</div>
+                        </th>
+                        <th class='th4' scope="col">
+                            <div class="slds-truncate" title="Stage">Stage</div>
+                        </th>
+                        <th class='th5' scope="col">
+                            <div class="slds-truncate" title="Confidence">Confidence</div>
+                        </th>
+
+                        <th class='th6' scope="col">
+                            <div class="slds-truncate" title="Confidence">Confidence</div>
+                        </th>
+
+                    </tr>
+                </thead>
+                <div id="tablebodydiv">
+                    <tbody>
+                        <tr>
+                            <td class='td1' scope="row" data-label="Opportunity Name">
+                                <div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);">Cloudhub</a></div>
+                            </td>
+                            <td class='td2' data-label="Account Name">
+                                <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+                            </td>
+                            <td class='td3' data-label="Close Date">
+                                <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
+                            </td>
+                            <td class='td4' data-label="Prospecting">
+                                <div class="slds-truncate" title="Prospecting">Prospecting</div>
+                            </td>
+                            <td class='td5' data-label="Confidence">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+                            <td class='td6' data-label="aaa">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class='td1' scope="row" data-label="Opportunity Name">
+                                <div class="slds-truncate" title="Cloudhub + Anypoint Connectors"><a href="javascript:void(0);">Cloudhub + Anypoint Connectors</a></div>
+                            </td>
+                            <td class='td2' data-label="Account Name">
+                                <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+                            </td>
+                            <td class='td3' data-label="Close Date">
+                                <div class="slds-truncate" title="4/13/2015">4/13/2015</div>
+                            </td>
+                            <td class='td4' data-label="Prospecting">
+                                <div class="slds-truncate" title="Prospecaa">Prospecaa</div>
+                            </td>
+                            <td class='td5' data-label="Confidence">
+                                <div class="slds-truncate" title="20%">22%</div>
+                            </td>
+                            <td class='td6' data-label="aaa">
+                                <div class="slds-truncate" title="20%">20%</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </div>
+            </table>
+
+        </div>
+        <!-- / REQUIRED SLDS WRAPPER -->
+
+    </body>
+
+    </html>
+
+</apex:page>

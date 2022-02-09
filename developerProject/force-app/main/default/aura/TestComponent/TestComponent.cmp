@@ -1,0 +1,13 @@
+<aura:component access="global" >
+    <div class="c-container">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12"   largeDeviceSize="6" padding="around-small">
+                <div class="custom-box">1</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12"  largeDeviceSize="6" padding="around-small">
+                <div class="custom-box">2</div>
+            </lightning:layoutItem>
+            
+        </lightning:layout>
+    </div>
+</aura:component>

@@ -1,0 +1,78 @@
+<apex:page controller="test_calculator" sidebar="false" action="{!Init}">
+    <apex:form >
+        <apex:pageBlock id="test_calculator" >
+            <apex:pageblockButtons >
+                <apex:commandButton value="test the calculation" action="{!test}"/>
+                <apex:commandButton value="refresh" action="{!refresh}"/>                   
+                
+            </apex:pageblockButtons>
+            
+            <apex:pageBlockSection columns="2" collapsible="false">        
+            
+        	<apex:pageBlockSectionItem >
+                <apex:outputLabel value="FinancedAmount" />
+                <apex:inputText value="{!FinancedAmount }" />
+            </apex:pageBlockSectionItem>
+                
+                <apex:selectList label="Frequency" value="{!Frequency }" multiselect="false" size="1">
+                    <apex:selectOptions value="{!Frequency_list }">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:selectList label="Term_list" value="{!Term }" multiselect="false" size="1">
+                    <apex:selectOptions value="{!Term_list }">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:selectList label="PaymentPeriod" value="{!PaymentPeriod }" multiselect="false" size="1">
+                    <apex:selectOptions value="{!PaymentPeriod_list }">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="IncludeDocFee" />
+                	<apex:inputCheckbox value="{!IncludeDocFee }" />
+            	</apex:pageBlockSectionItem>
+
+                
+                <apex:selectList label="ExternalBrokerageRate" value="{!ExternalBrokerageRate }" multiselect="false" size="1">
+                    <apex:selectOptions value="{!ExternalBrokerageRate_list }">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:selectList label="InternalBrokerageRate" value="{!InternalBrokerageRate }" multiselect="false" size="1">
+                    <apex:selectOptions value="{!InternalBrokerageRate_list }">
+                    </apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="MarginRate" />
+                	<apex:inputText value="{!MarginRate }" />
+            	</apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="SwapRate" />
+                	<apex:inputText value="{!SwapRate }" />
+            	</apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="RV" />
+                	<apex:inputText value="{!RV }" />
+            	</apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="DocumentationFees" />
+                	<apex:inputText value="{!DocumentationFees }" />
+            	</apex:pageBlockSectionItem>
+
+         		 <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Result" />
+                	<apex:outputText value="{!result }" />
+            	</apex:pageBlockSectionItem>       
+                
+
+ 
+            </apex:pageBlockSection>
+            </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Professionals</fullName>
+                <default>false</default>
+                <label>Professionals</label>
+            </value>
+            <value>
+                <fullName>Major Corporate</fullName>
+                <default>false</default>
+                <label>Major Corporate</label>
+            </value>
+            <value>
+                <fullName>Medium Corporate</fullName>
+                <default>false</default>
+                <label>Medium Corporate</label>
+            </value>
+            <value>
+                <fullName>Associations &amp; Clubs</fullName>
+                <default>false</default>
+                <label>Associations &amp; Clubs</label>
+            </value>
+            <value>
+                <fullName>Private Schools</fullName>
+                <default>false</default>
+                <label>Private Schools</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

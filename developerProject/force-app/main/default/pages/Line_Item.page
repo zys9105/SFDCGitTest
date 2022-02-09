@@ -1,0 +1,41 @@
+<apex:page controller="Line_Item" sidebar="false" action="{!Init}">
+    <apex:form >
+       
+    <apex:pageBlock id="detailBlock" >
+     <apex:pagemessages />
+        <apex:pageblockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+            <apex:commandButton value="New" action="{!newRecord}"/>
+            <apex:commandButton value="test" action="{!test}"/>
+            
+              </apex:pageblockButtons>
+       
+        <apex:pageBlockSection columns="2" collapsible="false">
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Quantity" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Quantity__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Unit Price" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Unit_Price__c}" />
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Total Price" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Total_Price__c}" />
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Asset Category" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Asset_Category__c}" />
+            </apex:pageBlockSectionItem>
+             
+        </apex:pageBlockSection>
+                
+        
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

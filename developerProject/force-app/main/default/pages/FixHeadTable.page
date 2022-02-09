@@ -1,0 +1,56 @@
+<apex:page Controller="FixHeadTableController" action="{!init}" >
+ <apex:form >
+<style>
+
+table.scroll {
+    width: 100%; /* Optional */
+    /* border-collapse: collapse; */
+}
+
+table.scroll tbody,
+table.scroll thead { display: block; }
+
+
+
+table.scroll tbody {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+table.scroll tbody { border-top: 2px solid black; }
+
+table.scroll  thead th {
+    width: 100%; /* Optional */
+    border-right: 1px solid black;
+}
+td.td1{
+    width: 100%; /* Optional */
+    border-right: 1px solid black;
+    
+}
+
+</style>
+
+    <table class="scroll">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Account Number</th>
+            <th>Website</th>
+        </tr>
+    </thead>
+     <tbody>
+        <apex:repeat var="Account" value="{!Accounts}">
+        <tr>
+            <td class = "td1">{!Account.Id}</td>
+            <td class = "td1">{!Account.Name}</td>
+            <td class = "td1" >{!Account.AccountNumber}</td>
+            <td class = "td1" >{!Account.Website}</td>
+        </tr>
+        </apex:repeat> 
+    </tbody>
+    </table>
+     </apex:form>
+</apex:page>

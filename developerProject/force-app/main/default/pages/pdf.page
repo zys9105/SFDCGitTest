@@ -1,0 +1,25 @@
+<apex:page showHeader="false" controller="pdfcontroller">
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Auto Call Equifax Settings">
+                <apex:PageBlockSectionItem >
+                    
+                    <apex:outputLabel value="Equifax Call on Account Creation" />
+                    <apex:outputPanel >
+                        
+                        <apex:selectList value="{!state}" multiselect="true" size="4">
+                            <apex:selectOptions value="{!StateFilter}"/>
+                        </apex:selectList>
+                        
+                    </apex:outputPanel>
+                </apex:PageBlockSectionItem>  
+                
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:commandButton value="Filtrar" action="{!MapFilter}"/>
+    </apex:form>
+    
+    
+</apex:page>

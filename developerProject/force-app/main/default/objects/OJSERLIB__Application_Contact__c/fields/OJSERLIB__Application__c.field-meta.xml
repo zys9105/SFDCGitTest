@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OJSERLIB__Application__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Application</label>
+    <referenceTo>OJSERLIB__Application__c</referenceTo>
+    <relationshipLabel>Application Contacts</relationshipLabel>
+    <relationshipName>Application_Contacts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

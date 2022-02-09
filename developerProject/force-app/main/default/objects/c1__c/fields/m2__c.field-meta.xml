@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>m2__c</fullName>
+    <externalId>false</externalId>
+    <label>m2</label>
+    <referenceTo>m2__c</referenceTo>
+    <relationshipLabel>c1s</relationshipLabel>
+    <relationshipName>c1s2</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

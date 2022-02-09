@@ -1,0 +1,199 @@
+<apex:page controller="ApplicationProcess" sidebar="false" action="{!Init}">
+    <apex:form >
+    
+    <!--              application layer                                 -->
+        <apex:outputPanel id="application" rendered="{!(bApplication)}">
+            <apex:pageBlock id="detailBlock_application" >
+                
+                <apex:pageblockButtons >
+                    <apex:commandButton value="New" action="{!newRecord}"/>
+                    <apex:commandButton value="Next" action="{!next}"/>
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="sent a email:" action="{!sent_email}"/>                   
+                </apex:pageblockButtons>
+                
+                <apex:pageBlockSection columns="2" collapsible="false">
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Application_Number" />
+                		<apex:InputField value="{!mapping_rec_Application.Application_Number__c}" />
+       				</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Comments" />
+                		<apex:InputField value="{!mapping_rec_Application.Comments__c}" />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="id:" />
+                		<apex:InputField value="{!mapping_rec_Application.id}" />
+        			</apex:pageBlockSectionItem>
+		
+       				<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Company_Name" />
+                		<apex:InputField value="{!mapping_rec_Application.Company_Name__c}" />
+        			</apex:pageBlockSectionItem>
+        
+        			<apex:pageBlockSectionItem >
+            			<apex:outputLabel value="Contract_Amount" />
+						<apex:inputField value="{!mapping_rec_Application.Contract_Amount__c}"/>
+        			</apex:pageBlockSectionItem>
+         
+ 					<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Customer_type" />
+                		<apex:InputField value="{!mapping_rec_Application.Customer_type__c}" />
+        			</apex:pageBlockSectionItem>                       
+           
+        			<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Frequency" />
+                		<apex:InputField value="{!mapping_rec_Application.Frequency__c}" />
+        			</apex:pageBlockSectionItem>
+                
+        			<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="No_Of_Payments" />
+                		<apex:InputField value="{!mapping_rec_Application.No_Of_Payments__c}" />
+        			</apex:pageBlockSectionItem>
+            
+        			<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Status" />
+                		<apex:InputField value="{!mapping_rec_Application.Status__c}" />
+        			</apex:pageBlockSectionItem>
+
+        			<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="GST" />
+                		<apex:outputField value="{!mapping_rec_Application.GST__c}" />
+        			</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Total account" />
+                		<apex:InputField value="{!mapping_rec_Application.Total_Amount__c}" />
+        			</apex:pageBlockSectionItem>
+					
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Total account and GST:" />
+                		<apex:outputField value="{!mapping_rec_Application.Total_Amount_and_GST__c}" />
+        			</apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="To address:" />
+                		<apex:InputField value="{!mapping_rec_Email.Email_Address__c}" />
+        			</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Object:" />
+                		<apex:InputField value="{!mapping_rec_Email.Email_Object__c}" />
+        			</apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Body:" />
+                		<apex:InputField value="{!mapping_rec_Email.Email_Body__c}" />
+        			</apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+       <!--              application-applicants layer                                 -->
+        <apex:outputPanel id="application-applicants" rendered="{!(bApplication_Applicant)}">   
+            <apex:pageBlock id="detailBlock_application-applicants" >
+                
+                <apex:pageblockButtons >
+    				<apex:commandButton value="Previous" action="{!previous}"/> 
+    				<apex:commandButton value="Next" action="{!next}"/> 	
+    			</apex:pageblockButtons>
+                
+                <apex:pageBlockSection columns="2" collapsible="false">
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="ABN" />
+                		<apex:InputField value="{!mapping_rec.ABN__c}" />
+        			</apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Business_Name" />
+                        <apex:InputField value="{!mapping_rec.Business_Name__c}" />
+                    </apex:pageBlockSectionItem>
+
+        			<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Business_Type__c" />
+                		<apex:InputField value="{!mapping_rec.Business_Type__c}" />
+        			</apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            	<apex:outputLabel value="Business_Address_Street" />
+		<apex:inputField value="{!mapping_rec.Business_Address_Street__c}"/>
+        </apex:pageBlockSectionItem>
+         
+ 	<apex:pageBlockSectionItem >
+                <apex:outputLabel value="Business_Address_State" />
+                <apex:InputField value="{!mapping_rec.Business_Address_State__c}" />
+        </apex:pageBlockSectionItem>
+                       
+        <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Business_Address_PostCode" />
+                <apex:InputField value="{!mapping_rec.Business_Address_PostCode__c}" />
+        </apex:pageBlockSectionItem>
+            
+        <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Business_Address_City__c" />
+                <apex:InputField value="{!mapping_rec.Business_Address_City__c}" />
+        </apex:pageBlockSectionItem>
+            
+        <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Primary_Applicant:" />
+                <apex:InputField value="{!mapping_rec.Primary_Applicant__c}" />
+        </apex:pageBlockSectionItem>
+            
+        <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Years_in_Business:" />
+                <apex:InputField value="{!mapping_rec.Years_in_Business__c}" />
+        </apex:pageBlockSectionItem>
+        
+                        
+        </apex:pageBlockSection>
+                
+   </apex:pageBlock>
+   
+   </apex:outputPanel>
+   
+   <apex:outputPanel id="Line_Item" rendered="{!(bLine_Item)}">   
+   
+   <apex:pageBlock id="detailBlock_Line_Item" >
+     <apex:pagemessages />
+        <apex:pageblockButtons >			
+    		<apex:commandButton value="Previous" action="{!previous}"/> 
+    		<apex:commandButton value="Save and New" action="{!save_new}"/>
+              </apex:pageblockButtons>
+       
+        <apex:pageBlockSection columns="2" collapsible="false">
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Quantity" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Quantity__c}" />
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Unit Price" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Unit_Price__c}" />
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Total Price" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Total_Price__c}" />
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Asset Category" />
+                <apex:InputField value="{!mapping_rec_Line_Item.Asset_Category__c}" />
+            </apex:pageBlockSectionItem>
+             
+        </apex:pageBlockSection>
+                
+        
+   </apex:pageBlock>
+   
+   </apex:outputPanel>
+   
+   
+  </apex:form>
+</apex:page>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Under Assessment</fullName>
+                <default>false</default>
+                <label>Under Assessment</label>
+            </value>
+            <value>
+                <fullName>Approved-Pending further info</fullName>
+                <default>false</default>
+                <label>Approved-Pending further info</label>
+            </value>
+            <value>
+                <fullName>Approved - Waiting on Invoice</fullName>
+                <default>false</default>
+                <label>Approved - Waiting on Invoice</label>
+            </value>
+            <value>
+                <fullName>In for Settlement</fullName>
+                <default>false</default>
+                <label>In for Settlement</label>
+            </value>
+            <value>
+                <fullName>Out for Signing</fullName>
+                <default>false</default>
+                <label>Out for Signing</label>
+            </value>
+            <value>
+                <fullName>Signed Documents</fullName>
+                <default>false</default>
+                <label>Signed Documents</label>
+            </value>
+            <value>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <label>Deferred</label>
+            </value>
+            <value>
+                <fullName>Settled</fullName>
+                <default>false</default>
+                <label>Settled</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

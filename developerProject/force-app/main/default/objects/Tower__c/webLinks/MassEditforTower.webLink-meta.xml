@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MassEditforTower</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>批量编辑</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/38.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/38.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS($ObjectType.Tower__c)}; 
+var strIDs=&apos;&apos;; 
+if (records[0] == null) 
+{ 
+alert(&apos;Please select a record&apos;); 
+} 
+else 
+{ 
+for (var n=0; n&lt;records.length; n++) 
+{ 
+if(strIDs == &apos;&apos;) 
+strIDs = records[n]; 
+else 
+strIDs = strIDs + &quot;,&quot; + records[n] ; 
+}
+window.location.href = &apos;/apex/MassManager__MassEdit?selectedRecords=&apos;+strIDs + &apos;&amp;selectedObject=Tower__c&amp;selectedFields=State__c, Location__Latitude__s,Location__Longitude__s,Name&amp;sortingFieldName=Name&amp;retURL=&apos;+ window.location.href;
+}</url>
+</WebLink>

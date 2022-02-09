@@ -1,0 +1,3 @@
+<apex:page >
+     {!$ObjectType.lead.accessible}
+</apex:page>
