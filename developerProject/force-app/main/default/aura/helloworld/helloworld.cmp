@@ -1,0 +1,5 @@
+<aura:component >
+        <c:helloMessage message="You look nice today."/>
+        <c:helloHeading />
+	<p>Hello Lightning!</p>
+</aura:component>

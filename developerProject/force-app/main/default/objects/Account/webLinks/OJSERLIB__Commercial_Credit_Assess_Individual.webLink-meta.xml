@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OJSERLIB__Commercial_Credit_Assess_Individual</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>VEDA Commercial Credit Assess - Individual</masterLabel>
+    <openType>sidebar</openType>
+    <page>OJSERLIB__CommercialAndCreditAssessIndividual</page>
+    <protected>false</protected>
+</WebLink>

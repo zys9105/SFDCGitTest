@@ -1,0 +1,81 @@
+<apex:page >
+
+<head>
+  <title>Bootstrap Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+            table {
+            width: 100%;
+        }
+
+        thead, tbody, tr, td, th { display: block; }
+
+        tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        thead th {
+            height: 30px;
+
+            /*text-align: left;*/
+        }
+
+        tbody {
+            height: 120px;
+            overflow-y: auto;
+        }
+
+        thead {
+            /* fallback */
+        }
+
+
+        tbody td, thead th {
+            width: 19.2%;
+            float: left;
+        }
+</style>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody class="slds-scrollable--y">
+    <tr>
+        <td class="filterable-cell">Ford</td>
+        <td class="filterable-cell">Escort</td>
+        <td class="filterable-cell">Blue</td>
+        <td class="filterable-cell">2000</td>
+    </tr>
+    <tr>
+        <td class="filterable-cell">Ford</td>
+        <td class="filterable-cell">Escort</td>
+        <td class="filterable-cell">Blue</td>
+        <td class="filterable-cell">2000</td>
+    </tr>
+            <tr>
+        <td class="filterable-cell">Ford</td>
+        <td class="filterable-cell">Escort</td>
+        <td class="filterable-cell">Blue</td>
+        <td class="filterable-cell">2000</td>
+    </tr>
+     <tr>
+        <td class="filterable-cell">Ford</td>
+        <td class="filterable-cell">Escort</td>
+        <td class="filterable-cell">Blue</td>
+        <td class="filterable-cell">2000</td>
+    </tr>
+    </tbody>
+    
+</table>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OJSERLIB__Amount__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Amount</label>
+    <summarizedField>OJSERLIB__Application_Line_Item__c.OJSERLIB__Total_Price__c</summarizedField>
+    <summaryForeignKey>OJSERLIB__Application_Line_Item__c.OJSERLIB__Application__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,38 @@
+<apex:page controller="MapFieldSetController" showHeader="false" sidebar="false" action="{!init}">
+    <apex:form id="allForm">
+        <apex:pageBlock title="---" id="editBlock" >
+            <apex:pageBlockButtons >
+               <!-- <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!edit}" value="edit"/>
+                <apex:commandButton action="{!cancel}" value="cancel"/> -->
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="MapObjectSection" title="Map Object" columns="3" collapsible="true">
+				<apex:repeat value="{!displayedMappedOjects}" var="displayedMappedOject" id="Repeat">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Chose a Object:" for="choseObject"/>
+                        <apex:selectList id="choseObject" style="max-width: 200px;" 
+                                         value="{!displayedMappedOject.objectApi__c}"
+                                         size="1" styleClass="handleClass">
+                             <apex:selectOptions value="{!objectOptions}"/> 
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                	<apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Chose a Field:" for="choseField"/>
+                        <apex:selectList id="choseField" value="{!displayedMappedOject.fieldApi__c}"
+                                         style="max-width: 200px;" 
+                                         size="1" styleClass="handleClass">
+                             <apex:selectOptions value="{!objectOptions}"/> 
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Whether On Hold:" for="isOnHold"/>
+                        <apex:inputfield value="{!displayedMappedOject.isOnHold__c}" />
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Mapping value" columns="2" collapsible="true">
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

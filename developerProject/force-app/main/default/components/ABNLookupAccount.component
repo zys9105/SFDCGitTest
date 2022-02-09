@@ -1,0 +1,116 @@
+<apex:component controller="AbnAcnlookUtility" allowDML="true">
+    <apex:form id="abnLookupForm">   
+    <apex:pagemessages id="errors" escape="false"/>
+    
+    <apex:includeScript value="/support/console/26.0/integration.js"/>
+<style>
+.row1 {
+background-color: #DDE3F4
+}
+.row2 {
+background-color: #eaeaea
+}
+</style>
+   
+<script type="text/javascript">
+    function clickRadio( ABN ) {
+       document.getElementById('{!$Component.selectedResult}').value = ABN;
+       alert(document.getElementById('{!$Component.selectedResult}').value);
+    }
+</script>
+    <apex:inputHidden value="{!selectedABN}" id="selectedResult"></apex:inputHidden>
+
+<!--
+    <apex:actionStatus id="status">
+        <apex:facet name="start">
+            <c:Action_Status BackColor="#ffffff"
+                                    borderColor="#6B6B6B"
+                                    borderSize="1"
+                                    height="50px"
+                                    width="60px"
+                                    margintop="-25px"
+                                    marginleft="-60px"
+                                    ImageUrl="{!$Resource.OJSERLIB__AjaxAnimation}"
+                                    Message=""/>
+        </apex:facet>
+    </apex:actionStatus>
+    
+--> 
+    <apex:outputPanel rendered="{!Not(AccessProblem)}">
+
+        <apex:pageBlock id="detailBlock" title="Validate Company Details" >
+            
+        <apex:pageblockButtons >
+            <apex:commandButton rerender="errors" value="Accept" action="{!accept}" status="status"/>
+            <apex:commandButton rerender="errors" value="Cancel" action="{!cancel}"/>
+        </apex:pageblockButtons>  
+        
+            <apex:pageBlockSection title="Company Information" columns="2" >        
+      		    <apex:pageBlockSectionItem >		
+        		    <apex:outputLabel value="ABN/ACN/Name" title="Search by ABN, ACN or name"/>
+            	    <apex:inputText value="{!company}" maxlength="255" size="55"/>   
+            	            
+        	    </apex:pageBlockSectionItem> 
+        	
+        	    <apex:commandButton rerender="searchResultSection, errors"  value="Search"  action="{!searchABNACNName}"  status="status"/>  
+        	    <apex:pageBlockSectionItem >
+        	    </apex:pageBlockSectionItem> 
+       </apex:pageBlockSection> 
+        
+        
+        
+        <apex:pageBlockSection id="searchResultSection" title="ABN Search results" columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Filter by State: " />
+                <apex:selectList value="{!selectState}" size="1" disabled="{!IF(isFilterable, false, true)}" >
+                    <apex:selectOptions value="{!states}" />
+                    <apex:actionSupport event="onchange" action="{!onChangeFilterState}" rerender="searchResultTable" status="status" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+                   
+            <apex:dataTable id="searchResultTable" value="{!searchResults}" var="searchResult" rowClasses="row1, row2"
+                columns="7" border="0" rules="none" cellspacing="2" cellpadding="2" align="left" width="100%">    
+
+                <apex:column width="5%" >
+                    <apex:facet name="header">Select</apex:facet>
+                    <apex:outputPanel rendered="{!IF(searchResult.status != 'Cancelled', true, false)}">
+                        <input type="radio" name="companyRadioGroup" onClick="clickRadio('{!searchResult.index}');"></input>
+                    </apex:outputPanel>
+                </apex:column>
+                
+                <apex:column width="15%" >
+                    <apex:facet name="header">ABN</apex:facet>
+                    <apex:outputLink value="http://abr.business.gov.au/SearchByAbn.aspx?abn={!searchResult.ABN}" target="_blank">{!searchResult.ABN}</apex:outputLink>
+                </apex:column>
+                
+                <apex:column width="25%" >
+                    <apex:facet name="header">Name</apex:facet>
+                    <apex:outputText value="{!searchResult.CompanyName}" />
+                </apex:column>
+            
+                
+                <apex:column width="10%" >
+                    <apex:facet name="header">Status</apex:facet>
+                    <apex:outputText value="{!searchResult.status}" />
+                </apex:column>
+                
+                 <apex:column width="10%" >
+                    <apex:facet name="header">Post Code</apex:facet>
+                    <apex:outputText value="{!searchResult.postcode}" />
+                </apex:column>
+                
+                <apex:column width="10%" >
+                    <apex:facet name="header">State</apex:facet>
+                    <apex:outputText value="{!searchResult.stateCode}" />
+                </apex:column>
+			 </apex:dataTable>
+        </apex:pageBlockSection>
+        
+        
+        
+        </apex:pageBlock> 
+    
+    </apex:outputPanel>
+    </apex:form>
+</apex:component>

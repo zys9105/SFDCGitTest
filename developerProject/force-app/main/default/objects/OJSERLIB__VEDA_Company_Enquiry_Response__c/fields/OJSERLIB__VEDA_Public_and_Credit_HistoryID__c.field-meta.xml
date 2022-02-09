@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OJSERLIB__VEDA_Public_and_Credit_HistoryID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>VEDA Public and Credit History</label>
+    <referenceTo>OJSERLIB__VEDA_Public_and_Credit_History_Info__c</referenceTo>
+    <relationshipLabel>VEDA Credit Check Company Details</relationshipLabel>
+    <relationshipName>VEDA_Credit_Check_Company_Details</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
